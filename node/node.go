@@ -165,6 +165,10 @@ func (n *Node) OnStart() error {
 	return nil
 }
 
+func (n *Node) GetGenesis() *types.GenesisDoc {
+	return n.genesis
+}
+
 // OnStop is a part of Service interface.
 func (n *Node) OnStop() {
 	n.P2P.Close()
